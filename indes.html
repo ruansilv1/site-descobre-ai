@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>DESCUBRA</title>
+    
+    <style>
+        body{
+            background-color: white;
+        }
+
+        h1{
+            color: #fff;
+        }
+
+        .painel{
+            margin: auto;
+            width: 1000px;
+            height: 500px;
+            background-color: #c509a6;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: cursive;
+
+
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: rgb(255, 0, 0);
+            border: 2px solid #fff;
+            border-radius: 10px;
+            color: white;
+            margin-left: -120px;
+
+        }
+        #não{
+            position: absolute;
+            height: 40px;
+            width: 100px;
+            background-color: rgb(255, 0, 0);
+            border: 2px solid #fff;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+
+    <div 
+    class="painel"> 
+        <h1> VEM ME VER SEXTA?</h1>
+
+
+
+        <a href="https://www.tiktok.com/@corte_ari/video/7293132581845978374?is_from_webapp=1&sender_device=pc"><button id="sim"> Claro! </button></a>
+        <button onmouseover="fuja()" id="não"> Sei de nada </button>
+       
+
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("não")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela =window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela -botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+            
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+</body>
+</html>
